@@ -20,7 +20,7 @@ function Galerija() {
 
   const fetchTodos = (count = 10) => {
     axios
-      .get(`http://207.154.219.175:5000/api/galerija`)
+      .get(`http://tiskara-humac.com/api/galerija`)
       .then((res) => {
         console.log(res.data);
 
