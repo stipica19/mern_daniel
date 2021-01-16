@@ -38,7 +38,7 @@ const UploadForm = () => {
     console.log(userInfo.token);
 
     axios
-      .post("http://207.154.219.175:8000/galerija/upload", data, {
+      .post("https://tiskara-humac.com/api/galerija/upload", data, {
         headers: {
           "content-type": "multipart/form-data",
           Authorization: `Bearer ${userInfo.token}`,

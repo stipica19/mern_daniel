@@ -61,7 +61,7 @@ function Galerija() {
                 <div className="g-box" key={image.images}>
                   <div className="img">
                     <img
-                      src={`https://tiskara-humac.com:5000/api/${image.images}`}
+                      src={`https://tiskara-humac.com/api/${image.images}`}
                       alt="blog"
                     />
                   </div>
