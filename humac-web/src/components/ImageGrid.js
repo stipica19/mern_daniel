@@ -19,7 +19,7 @@ const ImageGrid = ({ setSelectedImg }) => {
 
   const fetchTodos = (count = 10) => {
     axios
-      .get(`https://207.154.219.175:8000/galerija/${url.cat}?skip=${skip}`)
+      .get(`https://tiskara-humac.com/api/galerija/${url.cat}?skip=${skip}`)
       .then((res) => {
         console.log(res.data);
         setSkip(skip + 3);
@@ -62,12 +62,12 @@ const ImageGrid = ({ setSelectedImg }) => {
                     whileHover={{ opacity: 1 }}
                     onClick={() =>
                       setSelectedImg(
-                        `https://207.154.219.175:8000/${image.images}`
+                        `https://tiskara-humac.com/api/${image.images}`
                       )
                     }
                   >
                     <motion.img
-                      src={`https://207.154.219.175:8000/${image.images}`}
+                      src={`https://tiskara-humac.com/api/${image.images}`}
                       alt="uploaded pic"
                       initial={{ opacity: 0 }}
                       animate={{ opacity: 1 }}

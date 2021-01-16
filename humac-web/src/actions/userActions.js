@@ -21,7 +21,7 @@ export const login = (email, password) => async (dispatch) => {
     };
 
     const { data } = await axios.post(
-      "https://207.154.219.175:5000/login",
+      "https://207.154.219.175:5000/api/login",
       { email, password },
       config
     );
@@ -56,7 +56,7 @@ export const register = (name, email, password) => async (dispatch) => {
     };
 
     const { data } = await axios.post(
-      "https://tiskara-humac.com:5000/register",
+      "https://tiskara-humac.com:5000/api/register",
       { name, email, password },
       config
     );

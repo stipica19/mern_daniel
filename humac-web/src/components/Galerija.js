@@ -20,7 +20,7 @@ function Galerija() {
 
   const fetchTodos = (count = 10) => {
     axios
-      .get(`http://207.154.219.175:5000/galerija`)
+      .get(`http://207.154.219.175:5000/api/galerija`)
       .then((res) => {
         console.log(res.data);
 
@@ -61,7 +61,7 @@ function Galerija() {
                 <div className="g-box" key={image.images}>
                   <div className="img">
                     <img
-                      src={`https://tiskara-humac.com:5000/${image.images}`}
+                      src={`https://tiskara-humac.com:5000/api/${image.images}`}
                       alt="blog"
                     />
                   </div>

@@ -59,5 +59,5 @@ if (process.env.NODE_ENV === "production") {
 }
 
 app.listen(5000, (req, res) => {
-  console.log("SERVER JE STARTOVAN NA PORTU 8000");
+  console.log("SERVER JE STARTOVAN NA PORTU 5000");
 });
