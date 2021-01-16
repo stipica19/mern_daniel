@@ -31,6 +31,15 @@ mongoose.connect(connection_url, {
 mongoose.connection.once("open", () => {
   console.log("DB connected");
 });
+
+app.use((req, res, next) => {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header(
+    "Access-Control-Allow-Headers",
+    "Origin, X-Requested-With, Content-Type, Accept"
+  );
+  next();
+});
 const __dirname = path.resolve();
 app.use(express.static("public"));
 
@@ -49,6 +58,6 @@ if (process.env.NODE_ENV === "production") {
   });
 }
 
-app.listen(8000, (req, res) => {
+app.listen(5000, (req, res) => {
   console.log("SERVER JE STARTOVAN NA PORTU 8000");
 });
