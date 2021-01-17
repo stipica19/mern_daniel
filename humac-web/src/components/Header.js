@@ -29,7 +29,7 @@ function Header() {
   window.addEventListener("scroll", headerScroll);
 
   return (
-    <div className={navbar ? "header active" : "header"}>
+    <div className={navbar || menuActive ? "header active" : "header"}>
       <div className="container">
         <div className="row">
           <div className="brand-name">
