@@ -989,7 +989,7 @@ html {
   }
   .navbar.show {
     display: block;
-    margin-top: 25px;
+    margin-top: 0px;
   }
   .header .navbar ul li {
     display: block;
