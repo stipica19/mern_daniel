@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import "../style.css";
 import ChevronRightIcon from "@material-ui/icons/ChevronRight";
 import ChevronLeftRoundedIcon from "@material-ui/icons/ChevronLeftRounded";
+import { HashLink } from "react-router-hash-link";
 
 const Slider = ({ slides }) => {
   const [current, setCurrent] = useState(0);
@@ -62,7 +63,9 @@ const Slider = ({ slides }) => {
             data-aos-duration="800"
             data-aos-delay="300"
           >
-            <a href="#contact-us">KONTAKT</a>
+            <HashLink smooth to="/#contact-us">
+              KONTAKT
+            </HashLink>
           </div>
         </div>
         <ChevronLeftRoundedIcon className="left-arrow" onClick={prevSlide} />

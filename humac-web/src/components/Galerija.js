@@ -35,7 +35,7 @@ function Galerija() {
   return (
     <div
       className="galerija"
-      id="galerija "
+      id="galerija"
       data-aos="fade-in"
       data-aos-duration="800"
       data-aos-delay="300"

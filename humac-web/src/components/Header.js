@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { HashLink } from "react-router-hash-link";
 import "../style.css";
 import logo from "../logo.svg";
 import MenuIcon from "@material-ui/icons/Menu";
@@ -46,23 +47,34 @@ function Header() {
           <div className={`navbar ${menuActive ? "show" : ""}`}>
             <ul>
               <li>
-                <Link
-                  to="/"
+                <HashLink
+                  smooth
+                  to="/#home"
                   className="active"
                   onClick={() => setMenuActive(!menuActive)}
                 >
                   NASLOVNA
-                </Link>
+                </HashLink>
               </li>
               <li>
-                <a href="#about-me" onClick={() => setMenuActive(!menuActive)}>
+                <HashLink
+                  smooth
+                  to="/#about-us"
+                  className="active"
+                  onClick={() => setMenuActive(!menuActive)}
+                >
                   O NAMA
-                </a>
+                </HashLink>
               </li>
               <li>
-                <a href="#services" onClick={() => setMenuActive(!menuActive)}>
+                <HashLink
+                  smooth
+                  to="/#galerija"
+                  className="active"
+                  onClick={() => setMenuActive(!menuActive)}
+                >
                   USLUGE
-                </a>
+                </HashLink>
               </li>
               <li>
                 <Link to="/galerija" onClick={() => setMenuActive(!menuActive)}>
@@ -70,9 +82,14 @@ function Header() {
                 </Link>
               </li>
               <li>
-                <Link to="/" onClick={() => setMenuActive(!menuActive)}>
+                <HashLink
+                  smooth
+                  to="/#contact-us"
+                  className="active"
+                  onClick={() => setMenuActive(!menuActive)}
+                >
                   KONTAKT
-                </Link>
+                </HashLink>
               </li>
             </ul>
           </div>

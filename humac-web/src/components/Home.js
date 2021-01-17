@@ -29,7 +29,7 @@ function Home() {
   }, []);
 
   return (
-    <div className="home">
+    <div className="home" id="home">
       {isLoading ? (
         <div className="loaderr">
           <Loader />
