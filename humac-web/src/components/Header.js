@@ -7,17 +7,30 @@ import MenuIcon from "@material-ui/icons/Menu";
 import { Link } from "react-router-dom";
 
 function Header() {
+  const [scroll, setScroll] = useState(0);
+
   const [menuActive, setMenuActive] = useState(false);
   const [width, setWidth] = useState(window.innerWidth);
   const [navbar, setNavbar] = useState(false);
   const [closeNav, setCloseNav] = useState(false);
 
   useEffect(() => {
-    console.log("pojava");
     window.addEventListener("resize", () => setWidth(window.innerWidth));
-    if (closeNav === true) {
-    }
-  }, [closeNav]);
+
+    let progressBarHandler = () => {
+      const totalScroll = document.documentElement.scrollTop;
+      const windowHeight =
+        document.documentElement.scrollHeight -
+        document.documentElement.clientHeight;
+      const scroll = `${totalScroll / windowHeight}`;
+
+      setScroll(scroll);
+    };
+
+    window.addEventListener("scroll", progressBarHandler);
+
+    return () => window.removeEventListener("scroll", progressBarHandler);
+  }, []);
 
   const headerScroll = () => {
     //console.log(window.scrollY);
@@ -35,6 +48,12 @@ function Header() {
         <div className="row">
           <div className="brand-name">
             <img className="logo" src={logo} />
+          </div>
+          <div id="progressBarContainer">
+            <div
+              id="progressBar"
+              style={{ transform: `scale(${scroll}, 1)`, opacity: `${scroll}` }}
+            />
           </div>
           {width < 680 ? (
             <div className="ham-burger">
@@ -59,7 +78,7 @@ function Header() {
               <li>
                 <HashLink
                   smooth
-                  to="/#about-us"
+                  to="/#about-me"
                   className="active"
                   onClick={() => setMenuActive(!menuActive)}
                 >
