@@ -23,6 +23,7 @@ import { createBrowserHistory } from "history";
 // internal imports
 import "./App.css";
 import "aos/dist/aos.css";
+import ScrollTopArrow from "./components/ScrollTopArrow";
 // initialization
 AOS.init();
 
@@ -31,14 +32,14 @@ function App() {
 
   const userLogin = useSelector((state) => state.userLogin);
   const { userInfo } = userLogin;
-  useEffect(()=>{
+  useEffect(() => {
     history.listen((location) => {
       ReactGA.initialize("G-JQ3KKCP51S");
       ReactGA.set({ page: location.pathname }); // Update the user's current page
       ReactGA.pageview(location.pathname); // Record a pageview for the given page
     });
-  },[]);
- 
+  }, []);
+
   return (
     <Router history={history}>
       <div className="app">
@@ -67,12 +68,14 @@ function App() {
             <Register />
           </Route>
           <Route exact path="/">
+            <ScrollTopArrow />
             <Header />
             <Home />
             <About />
             <Usluge />
             <Galerija />
             <Contact />
+
             <Footer />
           </Route>
         </Switch>
