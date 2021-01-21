@@ -34,6 +34,7 @@ html {
   opacity: 0.95;
   padding: 0px 15px;
   z-index: 11;
+  margin-top: 8px;
 }
 .header {
   position: fixed;
@@ -82,12 +83,12 @@ html {
   font-weight: 700;
   display: block;
   position: relative;
-  color: rgb(144, 39, 131);
+  color: rgb(217, 31, 42);
 }
 .header .navbar ul li a::before {
   content: "";
   height: 2px;
-  background-color: rgb(144, 39, 131);
+  background-color: rgb(217, 31, 42);
   width: 0%;
   position: absolute;
   right: 0px;
@@ -125,7 +126,7 @@ html {
   flex: 0 0 65%;
   max-width: 75%;
   padding-left: 55px;
-  border-left: 5px solid rgb(144, 39, 131);
+  border-left: 5px solid rgb(217, 31, 42);
   margin-bottom: 5vh;
   margin-left: 20vh;
 }
@@ -396,7 +397,7 @@ html {
   border-radius: 25px;
   border: 1px solid #eeeeee;
   text-align: center;
-  background-color: rgb(144, 39, 131);
+  background-color: rgb(217, 31, 42);
   position: relative;
 }
 
@@ -441,7 +442,7 @@ html {
   font-size: 54px;
   border-radius: 50%;
   text-align: center;
-  color: rgb(144, 39, 131);
+  color: rgb(217, 31, 42);
 }
 
 @media (max-width: 500px) {
@@ -816,7 +817,7 @@ html {
   position: relative;
 }
 .c-box .icon > .MuiSvgIcon-root {
-  color: rgb(144, 39, 131);
+  color: rgb(217, 31, 42);
 }
 .contact-us .section-title p.small {
   display: block;
@@ -1034,7 +1035,7 @@ html {
     max-width: 100%;
   }
   .services .service-content .box:last-child {
-    background-color: rgb(144, 39, 131);
+    background-color: rgb(217, 31, 42);
     padding: 30px;
     flex: 0 0 100%;
     max-width: 100%;
@@ -1858,7 +1859,7 @@ body {
 }
 
 #progressBar {
-  background: linear-gradient(to left, rgb(141, 18, 255), rgb(153, 2, 253));
+  background: linear-gradient(to left, rgb(217, 31, 42), rgb(217, 31, 42));
   transform-origin: top left;
   transform: scale(0, 0);
   opacity: 0;
@@ -1866,7 +1867,7 @@ body {
 
 #progressBarContainer,
 #progressBar {
-  height: 10px;
+  height: 8px;
 }
 
 #myBtn {
@@ -1898,7 +1899,7 @@ body {
   z-index: 1000;
   cursor: pointer;
   animation: fadeIn 0.3s;
-  transition: opacity 0.4s;
+  transition: opacity 0.5s;
   opacity: 0.5;
   transform: scaleY(-1);
   right: 20px;
@@ -1918,12 +1919,12 @@ body {
 }
 .scrollTopp > .MuiSvgIcon-root {
   fill: currentColor;
-  width: 1.5em;
-  height: 1.5em;
+  width: 2em;
+  height: 2em;
   display: inline-block;
   font-size: 1.5rem;
   transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
   flex-shrink: 0;
   user-select: none;
-  color: rgb(106, 208, 248);
+  color: rgb(217, 31, 42);
 }

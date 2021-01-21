@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { HashLink } from "react-router-hash-link";
 import "../style.css";
-import logo from "../logo.svg";
+import logo from "../logo.png";
 import MenuIcon from "@material-ui/icons/Menu";
 
 import { Link } from "react-router-dom";
