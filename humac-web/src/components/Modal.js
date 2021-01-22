@@ -1,12 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
+import Header from "./Header.js";
 import "../style.css";
 
 const Modal = ({ setSelectedImg, selectedImg }) => {
+  const [hideHeader, setHideHeader] = useState(false);
   const handleClick = (e) => {
     if (e.target.classList.contains("backdrop")) {
-      console.log("KLIKNULI SMO NA SLIKU");
       setSelectedImg(null);
+      console.log("afafaf");
     }
   };
 
@@ -16,6 +18,7 @@ const Modal = ({ setSelectedImg, selectedImg }) => {
       onClick={handleClick}
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
+      style={{ marginTop: "10px" }}
     >
       <motion.img
         src={selectedImg}

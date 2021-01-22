@@ -925,7 +925,6 @@ html {
 .footer {
   background-color: #0c0c17;
   position: sticky;
-
   bottom: 0;
 }
 .footer .logo {
@@ -1135,6 +1134,13 @@ html {
 
 .slider--feature {
   text-align: center;
+}
+.slider .slider--content h1 {
+  font-family: "MyWebFont", "sans-serif";
+}
+.slider .slider--content h6 {
+  font-family: "MyWebFont", "sans-serif";
+  color: red;
 }
 
 .feature--title {
@@ -1495,6 +1501,30 @@ label:hover {
   margin: 60px auto;
   box-shadow: 3px 5px 7px rgba(0, 0, 0, 0.5);
   border: 3px solid white;
+}
+@media only screen and (max-width: 480px) {
+  .backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+  }
+  .backdrop img {
+    margin-top: 50%;
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+    box-shadow: 3px 5px 7px rgba(0, 0, 0, 0.5);
+    border: 3px solid white;
+  }
+  #progressBarContainer {
+    display: none;
+  }
+  .header {
+    display: none;
+  }
 }
 .title h1 {
   color: var(--primary);
