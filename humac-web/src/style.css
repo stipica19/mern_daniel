@@ -38,7 +38,7 @@ html {
   opacity: 0.95;
   padding: 0px 15px;
   z-index: 11;
-  margin-top: 8px;
+  margin-top: 5px;
   font-family: "MyWebFont", "sans-serif";
 }
 .header {
@@ -48,6 +48,7 @@ html {
   background-color: transparent;
   padding: 0px 15px;
   z-index: 11;
+  margin-top: 5px;
   font-family: "MyWebFont", "sans-serif";
 }
 .header.fixed {
@@ -926,6 +927,7 @@ html {
   background-color: #0c0c17;
   position: sticky;
   bottom: 0;
+  z-index: -1;
 }
 .footer .logo {
   flex: 0 0 100%;
@@ -987,9 +989,6 @@ html {
 
     border: none;
     border-bottom: 1px solid #eeeeee;
-  }
-  .header .brand-name a {
-    color: #000000;
   }
 
   .navbar {
@@ -1519,11 +1518,17 @@ label:hover {
     box-shadow: 3px 5px 7px rgba(0, 0, 0, 0.5);
     border: 3px solid white;
   }
-  #progressBarContainer {
-    display: none;
-  }
-  .header {
-    display: none;
+
+  .header.active {
+    position: fixed;
+    left: 0px;
+    right: 0px;
+    background-color: white;
+    opacity: 0.95;
+    padding: 0px 15px;
+    z-index: 11;
+
+    font-family: "MyWebFont", "sans-serif";
   }
 }
 .title h1 {

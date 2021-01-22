@@ -2,13 +2,20 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import Header from "./Header.js";
 import "../style.css";
+import styled from "styled-components";
+const header = styled.div`
+  margin: 40px;
+  border: 5px outset pink;
+  &:hover {
+    background-color: yellow;
+  }
+`;
 
 const Modal = ({ setSelectedImg, selectedImg }) => {
   const [hideHeader, setHideHeader] = useState(false);
   const handleClick = (e) => {
     if (e.target.classList.contains("backdrop")) {
       setSelectedImg(null);
-      console.log("afafaf");
     }
   };
 
