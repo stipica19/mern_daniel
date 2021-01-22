@@ -4,6 +4,7 @@ import axios from "axios";
 import "../style.css";
 import { useSelector } from "react-redux";
 import AddAPhotoIcon from "@material-ui/icons/AddAPhoto";
+import Header from "./Header";
 
 const UploadForm = () => {
   const [file, setFile] = useState("");
@@ -54,12 +55,11 @@ const UploadForm = () => {
 
   return (
     <div>
-      <h1>DODAJTE SLIKU U BAZU PODATAKA </h1>
+      <Header />
       <form onSubmit={handleSubmit}>
-        <label>
+        <div className="uploadFile">
           <input type="file" onChange={handleChange} />
-          <AddAPhotoIcon />
-        </label>
+        </div>
         <div className="flex-container">
           <div>
             <input
@@ -99,6 +99,19 @@ const UploadForm = () => {
               }}
             />{" "}
             3d
+          </div>
+          <div>
+            <input
+              className="option-input radio"
+              type="radio"
+              value="olovke"
+              name="cat"
+              onClick={(e) => {
+                setKat("olovke");
+                setName(e.target.value);
+              }}
+            />
+            Cover Photo
           </div>
           <div>
             <input

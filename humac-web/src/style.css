@@ -1979,3 +1979,8 @@ body {
   user-select: none;
   color: rgb(217, 31, 42);
 }
+
+/*============UPLOAD IMAGE==============*/
+.uploadFile {
+  padding-top: 100px;
+}

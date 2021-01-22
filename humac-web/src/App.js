@@ -15,6 +15,7 @@ import Register from "./components/Register";
 import { useSelector } from "react-redux";
 import PrivateRoute from "./components/PrivateRoute";
 import Bye from "./components/Bye";
+import Admin from "./components/Admin";
 import Login from "./components/Login";
 import AOS from "aos";
 import ReactGA from "react-ga";
@@ -49,6 +50,8 @@ function App() {
             user={userInfo}
             component={UploadForm}
           />
+          <PrivateRoute path="/admin" user={userInfo} component={Admin} />
+
           <Route path="/unauthorized" component={Bye} />
           <Route path="/galerija/:cat">
             <GalerijaOne />

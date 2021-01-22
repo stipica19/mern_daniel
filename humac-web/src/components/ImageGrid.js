@@ -25,8 +25,6 @@ const ImageGrid = ({ setSelectedImg }) => {
         setSkip(skip + 3);
         setImage([...images, ...res.data]);
         if (res.data.length === 0) {
-          console.log(images[0].name);
-          console.log("prazno");
           setLoading(!loading);
         }
       })
@@ -54,7 +52,7 @@ const ImageGrid = ({ setSelectedImg }) => {
           <div className="row">
             <div className="portfolio-gallery">
               {images &&
-                images.map((image) => (
+                images.reverse().map((image) => (
                   <motion.div
                     className="item"
                     key={image._id}

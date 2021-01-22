@@ -25,7 +25,6 @@ const Modal = ({ setSelectedImg, selectedImg }) => {
       onClick={handleClick}
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      style={{ marginTop: "10px" }}
     >
       <motion.img
         src={selectedImg}
