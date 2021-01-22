@@ -2,6 +2,10 @@
 
 @import url("https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
 
+@font-face {
+  font-family: "MyWebFont";
+  src: url("./font/Paragon\ Cleaners\ Black.ttf"); /* IE9 Compat Modes */
+}
 body {
   margin: 0;
   font-family: "Poppins", sans-serif;
@@ -35,6 +39,7 @@ html {
   padding: 0px 15px;
   z-index: 11;
   margin-top: 8px;
+  font-family: "MyWebFont", "sans-serif";
 }
 .header {
   position: fixed;
@@ -43,6 +48,7 @@ html {
   background-color: transparent;
   padding: 0px 15px;
   z-index: 11;
+  font-family: "MyWebFont", "sans-serif";
 }
 .header.fixed {
   background-color: #ffffff;
@@ -214,6 +220,7 @@ html {
   max-width: 100%;
   margin-bottom: 40px;
   margin-top: 50px;
+  font-family: "MyWebFont", "sans-serif";
 }
 .about-me .section-title h1 {
   display: inline-block;
@@ -244,6 +251,7 @@ html {
   right: 30%;
   background-color: rgba(46, 124, 134);
   bottom: 0px;
+  font-family: "MyWebFont", "sans-serif";
 }
 .text-uppercase {
   text-transform: uppercase !important;
@@ -326,17 +334,21 @@ html {
   padding-top: 20px;
 }
 .about-me .about-content .text .social-links a {
-  height: 30px;
-  width: 30px;
-  background-color: #000000;
+  height: 55px;
+  width: 35px;
+
   border-radius: 3px;
   display: inline-block;
-  border: 1px solid #000000;
+
   line-height: 28px;
   text-align: center;
   margin: 0 1px;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
+}
+.about-me .about-content .text .social-links a > .MuiSvgIcon-root {
+  color: #424242;
+  font-size: 28px;
 }
 .about-me .about-content .text .social-links a:hover {
   background-color: transparent;
@@ -355,6 +367,7 @@ html {
 }
 .services .section-title {
   margin-top: 50px;
+  font-family: "MyWebFont", "sans-serif";
 }
 .services .dots {
   position: absolute;
@@ -708,6 +721,7 @@ html {
 }
 .galerija .section-title {
   margin-top: 50px;
+  font-family: "MyWebFont", "sans-serif";
 }
 .galerija .section-title h1:before {
   left: 30%;
@@ -795,6 +809,7 @@ html {
   max-width: 100%;
   margin-bottom: 40px;
   margin-top: 50px;
+  font-family: "MyWebFont", "sans-serif";
 }
 .contact-us .dots {
   position: absolute;
@@ -919,12 +934,13 @@ html {
   object-fit: contain;
   height: 65px;
   align-items: center;
+  margin-top: 10px;
 }
 .footer .social {
   flex: 0 0 100%;
   max-width: 100%;
   text-align: center;
-  padding-top: 35px;
+  padding-top: 15px;
 }
 .footer .social a {
   color: #999999;
@@ -1851,7 +1867,7 @@ body {
 #progressBarContainer {
   position: fixed;
   z-index: 10;
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0.9);
   width: 100%;
   top: 0;
   left: 0;
@@ -1867,7 +1883,7 @@ body {
 
 #progressBarContainer,
 #progressBar {
-  height: 8px;
+  height: 5px;
 }
 
 #myBtn {

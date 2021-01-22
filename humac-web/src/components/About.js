@@ -4,6 +4,7 @@ import FacebookIcon from "@material-ui/icons/Facebook";
 import InstagramIcon from "@material-ui/icons/Instagram";
 import MailIcon from "@material-ui/icons/Mail";
 import slika from "../images/linije.png";
+import { Link } from "react-router-dom";
 
 function About() {
   return (
@@ -57,9 +58,15 @@ function About() {
                 </p>
 
                 <div className="social-links">
-                  <FacebookIcon />
-                  <InstagramIcon />
-                  <MailIcon />
+                  <a href="https://www.facebook.com/tiskara.humac2">
+                    <FacebookIcon />
+                  </a>
+                  <a href="https://www.instagram.com/tiskarahumac/">
+                    <InstagramIcon />{" "}
+                  </a>
+                  <a href="mailto:tiskarahumac@gmail.com">
+                    <MailIcon />
+                  </a>
                 </div>
               </div>
             </div>
