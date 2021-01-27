@@ -49,12 +49,20 @@ function Header() {
           <div className="brand-name">
             <img className="logo" src={logo} />
           </div>
-          <div id="progressBarContainer">
-            <div
-              id="progressBar"
-              style={{ transform: `scale(${scroll}, 1)`, opacity: `${scroll}` }}
-            />
-          </div>
+          {navbar ? (
+            <div id="progressBarContainer">
+              <div
+                id="progressBar"
+                style={{
+                  transform: `scale(${scroll}, 1)`,
+                  opacity: `${scroll}`,
+                }}
+              />
+            </div>
+          ) : (
+            ""
+          )}
+
           {width < 680 ? (
             <div className="ham-burger">
               <MenuIcon onClick={() => setMenuActive(!menuActive)} />

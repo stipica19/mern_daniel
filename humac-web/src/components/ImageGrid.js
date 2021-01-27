@@ -52,7 +52,7 @@ const ImageGrid = ({ setSelectedImg }) => {
           <div className="row">
             <div className="portfolio-gallery">
               {images &&
-                images.reverse().map((image) => (
+                images.map((image) => (
                   <motion.div
                     className="item"
                     key={image._id}
