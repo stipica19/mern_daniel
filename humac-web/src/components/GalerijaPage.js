@@ -2,12 +2,13 @@ import React from "react";
 
 import Header from "./Header";
 import "../style.css";
-import slika1 from "../images/1.jpg";
-import slika2 from "../images/2.jpg";
-import slika3 from "../images/3.jpg";
-import slika4 from "../images/4.jpg";
-import slika6 from "../images/6.jpg";
-import slika5 from "../images/5.jpg";
+import digitalni_print from "../images/digitalni_print.svg";
+import dizajn from "../images/dizajn.svg";
+import galanterija from "../images/galanterija.svg";
+import lasersko_graviranje from "../images/lasersko_graviranje.svg";
+import reklame from "../images/reklame.svg";
+import tisak_na_tekstil from "../images/tisak_na_tekstil.svg";
+import xxl_print from "../images/xxl_print.svg";
 import { Link } from "react-router-dom";
 
 function GalerijaPage() {
@@ -22,49 +23,93 @@ function GalerijaPage() {
 
         <div className="row">
           <div className="portfolio-gallery">
-            <Link to={`galerija/grafika`} className="item">
-              <img src={slika1} alt="GRAFIČKI DIZAJN" name="GRAFIČKI DIZAJN" />
+            <Link to={`galerija/digitalni_print`} className="item">
+              <img
+                data-aos="fade-in"
+                data-aos-duration="800"
+                data-aos-delay="300"
+                src={digitalni_print}
+                alt="digitalni_print"
+                name="digitalni_print"
+              />
               <div className="overlay">
-                <span className="fa fa-plus"></span>
-                <h4>GRAFIČKI DIZAJN </h4>
+                <h4>Digitalni print </h4>
               </div>
             </Link>
 
-            <Link to={`galerija/pecati`} className="item">
-              <img src={slika2} alt="portfolio" name="PECATI" />
+            <Link to={`galerija/dizajn`} className="item">
+              <img
+                src={dizajn}
+                alt="dizajn"
+                name="DIZAJN"
+                data-aos="fade-in"
+                data-aos-duration="800"
+                data-aos-delay="300"
+              />
               <div className="overlay">
-                <span className="fa fa-plus"></span>
-                <h4>PEČATI</h4>
+                <h4>GRAFIČKI DIZAJN</h4>
               </div>
             </Link>
-            <Link to={`galerija/t-shirt`} className="item">
-              <img src={slika3} alt="portfolio" />
+            <Link to={`galerija/galanterija`} className="item">
+              <img
+                src={galanterija}
+                alt="galanterija"
+                data-aos="fade-in"
+                data-aos-duration="800"
+                data-aos-delay="300"
+              />
               <div className="overlay">
-                <span className="fa fa-plus"></span>
-                <h4>MAJICE</h4>
+                <h4>Galanterija</h4>
               </div>
             </Link>
 
-            <Link to={`galerija/3dreklame`} className="item">
-              <img src={slika4} alt="portfolio" />
+            <Link to={`galerija/lasersko_graviranje`} className="item">
+              <img
+                src={lasersko_graviranje}
+                alt="lasersko_graviranje"
+                data-aos="fade-in"
+                data-aos-duration="800"
+                data-aos-delay="300"
+              />
               <div className="overlay">
-                <span className="fa fa-plus"></span>
-                <h4>3D REKLAME</h4>
+                <h4>Lasersko graviranje</h4>
               </div>
             </Link>
 
-            <Link to={`galerija/oip`} className="item">
-              <img src={slika6} alt="portfolio" />
+            <Link to={`galerija/reklame`} className="item">
+              <img
+                src={reklame}
+                alt="reklame"
+                data-aos="fade-in"
+                data-aos-duration="800"
+                data-aos-delay="300"
+              />
               <div className="overlay">
-                <span className="fa fa-plus"></span>
-                <h4>OLOVKE I UPALJAČI</h4>
+                <h4>Reklame</h4>
               </div>
             </Link>
-            <Link to={`galerija/naljepnice`} className="item">
-              <img src={slika5} alt="portfolio" />
+            <Link to={`galerija/tisak_na_tekstil`} className="item">
+              <img
+                src={tisak_na_tekstil}
+                alt="tisak_na_tekstil"
+                data-aos="fade-in"
+                data-aos-duration="800"
+                data-aos-delay="300"
+              />
               <div className="overlay">
-                <span className="fa fa-plus"></span>
-                <h4>NALJEPNICE</h4>
+                <h4>Tisak na tekstil</h4>
+              </div>
+            </Link>
+            <Link to={`galerija/xxl_print`} className="item xxl">
+              <img
+                src={xxl_print}
+                alt="xxl_print"
+                data-aos="fade-in"
+                data-aos-duration="800"
+                data-aos-delay="300"
+              />
+              <div className="overlay">
+                <h4>XXL print</h4>
               </div>
             </Link>
           </div>

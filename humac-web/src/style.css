@@ -114,7 +114,7 @@ html {
   object-fit: contain;
   display: flex;
   align-items: center;
-  height: 60px;
+  height: 50px;
 }
 
 .full-screne {
@@ -463,6 +463,13 @@ html {
   .box:last-child .icon > .MuiSvgIcon-root {
     color: white;
   }
+  .portfolio .portfolio-gallery .item .overlay h4 {
+    margin-top: 65%;
+    color: red;
+    font-size: 18px;
+    font-weight: 600;
+    animation: galleryText 0.8s ease;
+  }
 }
 .services .service-content .box h5 {
   font-size: 16px;
@@ -567,25 +574,41 @@ html {
   max-width: calc(33.33% - 10px);
   margin-bottom: 36px;
   position: relative;
+  display: flex;
+  justify-content: center;
 }
+.portfolio .portfolio-gallery .item:last-child {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  position: relative;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
 .portfolio .portfolio-gallery .item img {
-  width: 100%;
+  width: 80%;
   display: block;
 }
+
 .portfolio .portfolio-gallery .item .overlay {
   position: absolute;
-  left: 0;
   top: 0;
   bottom: 0;
-  right: 0;
-  background-color: rgba(0, 0, 0, 0.6);
   z-index: 10;
   display: flex;
   flex-wrap: nowrap;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   opacity: 0;
+  width: 80%;
+  justify-content: center;
 }
 .portfolio .portfolio-gallery .item .overlay .fa {
   height: 50px;
@@ -598,7 +621,7 @@ html {
   border-radius: 50%;
   cursor: pointer;
 }
-.portfolio .portfolio-gallery .item:hover .overlay {
+.portfolio .portfolio-gallery .item .overlay {
   opacity: 1;
 }
 @keyframes galleryIcon {
@@ -630,9 +653,8 @@ html {
   animation: galleryText 0.8s ease;
 }
 .portfolio .portfolio-gallery .item .overlay h4 {
-  margin-top: 15px;
-
-  color: #ffffff;
+  margin-top: 65%;
+  color: red;
   font-size: 25px;
   font-weight: 600;
   animation: galleryText 0.8s ease;
@@ -974,6 +996,13 @@ html {
   .home .home-content .block h1 {
     font-size: 50px;
   }
+  .portfolio .portfolio-gallery .item .overlay h4 {
+    margin-top: 65%;
+    color: red;
+    font-size: 18px;
+    font-weight: 600;
+    animation: galleryText 0.8s ease;
+  }
 }
 @media (max-width: 767px) {
   .home .home-content .block h1 {
@@ -989,6 +1018,13 @@ html {
 
     border: none;
     border-bottom: 1px solid #eeeeee;
+  }
+  .portfolio .portfolio-gallery .item .overlay h4 {
+    margin-top: 65%;
+    color: red;
+    font-size: 18px;
+    font-weight: 600;
+    animation: galleryText 0.8s ease;
   }
 
   .navbar {
@@ -1110,6 +1146,17 @@ html {
   .portfolio .portfolio-gallery .item {
     flex: 0 0 100%;
     max-width: 100%;
+  }
+  .portfolio .portfolio-gallery .item:last-child {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .portfolio .portfolio-gallery .item .overlay h4 {
+    margin-top: 65%;
+    color: red;
+    font-size: 18px;
+    font-weight: 600;
+    animation: galleryText 0.8s ease;
   }
   .about-me .about-content .text .info .list p {
     flex: 0 0 100%;
@@ -1510,6 +1557,13 @@ label:hover {
     height: 100%;
     background: rgba(0, 0, 0, 0.8);
   }
+  .portfolio .portfolio-gallery .item .overlay h4 {
+    margin-top: 65%;
+    color: red;
+    font-size: 18px;
+    font-weight: 600;
+    animation: galleryText 0.8s ease;
+  }
   .backdrop img {
     margin-top: 50%;
     display: block;
@@ -1847,6 +1901,13 @@ body {
   }
   .notfound h2 {
     font-size: 16px;
+  }
+  .portfolio .portfolio-gallery .item .overlay h4 {
+    margin-top: 65%;
+    color: red;
+    font-size: 18px;
+    font-weight: 600;
+    animation: galleryText 0.8s ease;
   }
 }
 /*===================LOADER===================*/
