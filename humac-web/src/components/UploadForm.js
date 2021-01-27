@@ -65,53 +65,92 @@ const UploadForm = () => {
             <input
               className="option-input radio"
               type="radio"
-              value="pecati"
+              value="digitalni print"
               name="cat"
               onClick={(e) => {
-                setKat("pecati");
+                setKat("digitalni_print");
                 setName(e.target.value);
               }}
             />
-            pecati
+            digitalni_print
           </div>
           <div>
             <input
               className="option-input radio"
               type="radio"
-              value="t-shirt"
+              value="dizajn"
               name="cat"
               onClick={(e) => {
-                setKat("t-shirt");
+                setKat("dizajn");
                 setName(e.target.value);
               }}
             />{" "}
-            majice
+            dizajn
           </div>
           <div>
             <input
               className="option-input radio"
               type="radio"
-              value="3dreklame"
+              value="galanterija"
               name="cat"
               onClick={(e) => {
-                setKat("3dreklame");
+                setKat("galanterija");
                 setName(e.target.value);
               }}
             />{" "}
-            3d
+            galanterija
           </div>
           <div>
             <input
               className="option-input radio"
               type="radio"
-              value="olovke"
+              value="lasersko graviranje"
               name="cat"
               onClick={(e) => {
-                setKat("olovke");
+                setKat("lasersko_graviranje");
                 setName(e.target.value);
               }}
             />
-            Cover Photo
+            lasersko graviranje
+          </div>
+          <div>
+            <input
+              className="option-input radio"
+              type="radio"
+              value="reklame"
+              name="cat"
+              onClick={(e) => {
+                setKat("reklame");
+                setName(e.target.value);
+              }}
+            />
+            reklame
+          </div>
+          <div>
+            <input
+              className="option-input radio"
+              type="radio"
+              value="tisak na tekstil"
+              name="cat"
+              onClick={(e) => {
+                setKat("tisak_na_tekstil");
+                setName(e.target.value);
+              }}
+            />
+            tisak na tekstil
+          </div>
+          <div>
+            <input
+              className="option-input radio"
+              type="radio"
+              value="xxl print"
+              name="cat"
+              onClick={(e) => {
+                setKat("xxl_print");
+                setName(e.target.value);
+              }}
+            />
+            XLL_PRINT
           </div>
           <div>
             <input

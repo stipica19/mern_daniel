@@ -17,7 +17,7 @@ function GalerijaPage() {
       <div className="container">
         <div className="row">
           <div className="section-title text-center">
-            <h1>GALERIJA </h1>
+            <h1>GALERIJA</h1>
           </div>
         </div>
 

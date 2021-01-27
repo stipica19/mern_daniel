@@ -43,7 +43,6 @@ router.get("/:cat", async (req, res) => {
         : 0;
     console.log(skip);
     const slike = await Post.find({ category: req.params.cat })
-      .sort({ createdOn: 1 })
       .skip(skip)
       .limit(perPage);
     console.log(slike);
