@@ -22,12 +22,13 @@ const ImageGrid = ({ setSelectedImg }) => {
       .get(`https://tiskara-humac.com/api/galerija/${url.cat}?skip=${skip}`)
       .then((res) => {
         console.log(res.data);
+        if (res.data.length === 0) {
+          console.log("usli");
+          setLoading(!loading);
+        }
         setSkip(skip + 3);
         setCategory(res.data[0].category);
         setImage([...images, ...res.data]);
-        if (res.data.length === 0) {
-          setLoading(!loading);
-        }
       })
       .catch((err) => console.log(err));
   };
@@ -46,7 +47,6 @@ const ImageGrid = ({ setSelectedImg }) => {
           next={fetchTodos}
           style={{ display: "flex", flexDirection: "column-reverse" }}
           hasMore={true}
-          loader={loading ? <Loader /> : ""}
           scrollableTarget="scrollableDiv"
         >
           {" "}
@@ -74,6 +74,7 @@ const ImageGrid = ({ setSelectedImg }) => {
                     />
                   </motion.div>
                 ))}
+              {loading ? <Loader /> : ""}
             </div>
           </div>
         </InfiniteScroll>

@@ -3,6 +3,7 @@ import styled from "styled-components";
 
 const Loading = styled.div`
   text-align: center;
+  margin: 0 auto;
   .lds-ellipsis {
     display: inline-block;
     position: relative;
@@ -11,6 +12,7 @@ const Loading = styled.div`
   }
   .lds-ellipsis div {
     position: absolute;
+
     top: 33px;
     width: 13px;
     height: 13px;
