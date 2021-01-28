@@ -31,7 +31,6 @@ router.get("/", (req, res) => {
 
 router.get("/:cat", async (req, res) => {
   var perPage = 3;
-
   const skip =
     req.query.skip && /^\d+$/.test(req.query.skip) ? Number(req.query.skip) : 0;
   console.log(skip);
@@ -43,7 +42,7 @@ router.get("/:cat", async (req, res) => {
         : 0;
     console.log(skip);
     const slike = await Post.find({ category: req.params.cat })
-      .sort({ datum: -1 })
+      //.sort({ images: -1 })
       .skip(skip)
       .limit(perPage);
     console.log(slike);

@@ -752,6 +752,7 @@ html {
 .galerija .dots {
   position: absolute;
   right: 0px;
+  top: 0px;
 }
 .galerija .dots > img {
   object-fit: contain;
@@ -775,7 +776,7 @@ html {
   flex-wrap: wrap;
 }
 .galerija .galerija-content .g-box {
-  flex: 0 0 calc(33.33% - 25px);
+  flex: 0 0 calc(33.33% - 20px);
   max-width: calc(33.33% - 25px);
 }
 .galerija .galerija-content .g-box .img {
@@ -786,7 +787,7 @@ html {
 }
 .galerija .galerija-content .g-box .img img {
   width: 100%;
-  height: 220px;
+
   object-fit: contain;
   display: block;
   transition: all 0.3s ease;

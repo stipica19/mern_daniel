@@ -56,7 +56,7 @@ function Galerija() {
           <div className="galerija-content">
             {images
               .reverse()
-              .slice(0, 5)
+              .slice(0, 6)
               .map((image) => (
                 <div className="g-box" key={image.images}>
                   <div className="img">

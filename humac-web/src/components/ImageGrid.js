@@ -8,7 +8,7 @@ import InfiniteScroll from "react-infinite-scroll-component";
 
 const ImageGrid = ({ setSelectedImg }) => {
   const [skip, setSkip] = useState(0);
-  //const [category, setCategory] = useState("");
+  const [category, setCategory] = useState("");
   const url = useParams();
   const [images, setImage] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -23,6 +23,7 @@ const ImageGrid = ({ setSelectedImg }) => {
       .then((res) => {
         console.log(res.data);
         setSkip(skip + 3);
+        setCategory(res.data[0].category);
         setImage([...images, ...res.data]);
         if (res.data.length === 0) {
           setLoading(!loading);
@@ -36,7 +37,7 @@ const ImageGrid = ({ setSelectedImg }) => {
       <div className="container">
         <div className="row">
           <div className="section-title text-center">
-            <h1>GALERIJA/ </h1>
+            <h1>GALERIJA/ {category} </h1>
           </div>
         </div>
 
