@@ -180,7 +180,7 @@ html {
 .section-title {
   flex: 0 0 100%;
   max-width: 100%;
-  margin-bottom: 120px;
+  margin-bottom: 100px;
 }
 
 .section-title h1 {
@@ -556,7 +556,7 @@ html {
 /*Portfolioooo  ==========    ==========          ==========           */
 .portfolio {
   background-color: #f5f8fd;
-  padding: 150px 150px 500px 150px;
+  padding: 100px 35px;
 }
 .portfolio .section-title h1::before {
   left: 30%;
