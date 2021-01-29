@@ -199,7 +199,7 @@ html {
   position: absolute;
   height: 2px;
   right: 30%;
-  background-color: rgba(46, 124, 134);
+  background-color: rgb(217, 31, 42);
   bottom: 0px;
 }
 .text-center {
@@ -250,7 +250,7 @@ html {
   position: absolute;
   height: 2px;
   right: 30%;
-  background-color: rgba(46, 124, 134);
+  background-color: rgb(217, 31, 42);
   bottom: 0px;
   font-family: "MyWebFont", "sans-serif";
 }
@@ -951,6 +951,7 @@ html {
   position: sticky;
   bottom: 0;
   z-index: -1;
+  margin-top: 200px;
 }
 .footer .logo {
   flex: 0 0 100%;

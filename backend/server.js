@@ -20,8 +20,6 @@ const connection_url =
 app.use(express.json());
 app.use(Cors());
 
-// create new express app and save it as "app"
-
 //DB CONFIG
 mongoose.connect(connection_url, {
   useNewUrlParser: true,
