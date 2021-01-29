@@ -38,14 +38,19 @@ const ImageGrid = ({ setSelectedImg }) => {
       <div className="container">
         <div className="row">
           <div className="section-title text-center">
-            <h1>GALERIJA/ {category} </h1>
+            <h1>GALERIJA / {category} </h1>
           </div>
         </div>
 
         <InfiniteScroll
           dataLength={images.length}
           next={fetchTodos}
-          style={{ display: "flex", flexDirection: "column-reverse" }}
+          style={{
+            display: "flex",
+            flexDirection: "column-reverse",
+
+            overflow: "auto",
+          }}
           hasMore={true}
           scrollableTarget="scrollableDiv"
         >

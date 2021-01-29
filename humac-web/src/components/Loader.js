@@ -4,11 +4,13 @@ import styled from "styled-components";
 const Loading = styled.div`
   text-align: center;
   margin: 0 auto;
+
   .lds-ellipsis {
     display: inline-block;
     position: relative;
     width: 80px;
     height: 80px;
+    padding-bottom: 200px;
   }
   .lds-ellipsis div {
     position: absolute;
