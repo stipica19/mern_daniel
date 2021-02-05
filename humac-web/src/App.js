@@ -18,6 +18,7 @@ import Bye from "./components/Bye";
 import Admin from "./components/Admin";
 import Login from "./components/Login";
 import AOS from "aos";
+import MessengerCustomerChat from "react-messenger-customer-chat";
 
 import { createBrowserHistory } from "history";
 
@@ -71,7 +72,10 @@ function App() {
             <Usluge />
             <Galerija />
             <Contact />
-
+            <MessengerCustomerChat
+              pageId="239772589537326"
+              appId="408068093813051"
+            />
             <Footer />
           </Route>
         </Switch>
