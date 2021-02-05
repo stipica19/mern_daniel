@@ -2006,9 +2006,9 @@ body {
 .scrollTop {
   position: fixed;
   width: 100%;
-  bottom: 20px;
+  bottom: 30px;
   align-items: center;
-  height: 40px;
+  height: 120px;
   justify-content: center;
   z-index: 1000;
   cursor: pointer;
@@ -2016,11 +2016,14 @@ body {
   transition: opacity 0.5s;
   opacity: 0.5;
   transform: scaleY(-1);
-  right: 20px;
+  right: 95px;
 }
 
 .scrollTop:hover {
   opacity: 1;
+}
+.svg {
+  height: 100px;
 }
 
 @keyframes fadeIn {

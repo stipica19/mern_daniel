@@ -29,7 +29,11 @@ const ScrollTopArrow = () => {
       <ArrowDropDownCircleRoundedIcon
         className="scrollTop"
         onClick={scrollTop}
-        style={{ height: 40, display: showScroll ? "flex" : "none" }}
+        style={{
+          height: "70px",
+          width: "70px",
+          display: showScroll ? "flex" : "none",
+        }}
       />
     </div>
   );

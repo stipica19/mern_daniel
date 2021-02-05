@@ -72,13 +72,14 @@ function App() {
             <Usluge />
             <Galerija />
             <Contact />
-            <MessengerCustomerChat
-              pageId="239772589537326"
-              appId="408068093813051"
-            />
+
             <Footer />
           </Route>
         </Switch>
+        <MessengerCustomerChat
+          pageId="239772589537326"
+          appId="408068093813051"
+        />
       </div>
     </Router>
   );
