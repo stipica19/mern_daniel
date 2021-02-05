@@ -4,6 +4,7 @@ import Mouse from "./Mouse";
 import axios from "axios";
 import Slider from "./Slider";
 import { Loader } from "./Loader";
+import MessengerCustomerChat from "react-messenger-customer-chat";
 
 function Home() {
   const [isLoading, setIsLoading] = useState(false);
@@ -38,6 +39,11 @@ function Home() {
         <div>
           <Slider slides={data} />
           <Mouse />
+          <MessengerCustomerChat
+            pageId="tiskara.humac2"
+            appId="408068093813051"
+          />
+          ,
         </div>
       )}
     </div>

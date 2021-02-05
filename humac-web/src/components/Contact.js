@@ -28,7 +28,7 @@ function Contact() {
   const sendEmail = () => {
     console.log("s");
     axios
-      .post("http://localhost:5000/email", formData)
+      .post("http://tiskara-humac.com/api/email", formData)
       .then((res) => {
         console.log("uspkesno poslana");
       })
