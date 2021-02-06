@@ -5,12 +5,14 @@ import "../style.css";
 import { useSelector } from "react-redux";
 import AddAPhotoIcon from "@material-ui/icons/AddAPhoto";
 import Header from "./Header";
+import Progress from "./Progress";
 
 const UploadForm = () => {
   const [file, setFile] = useState("");
   const [error, setError] = useState(null);
   const [kat, setKat] = useState("");
   const [name, setName] = useState("");
+  const [uploadPercentage, setUploadPercentage] = useState(0);
   const userLogin = useSelector((state) => state.userLogin);
   const { userInfo } = userLogin;
 
@@ -36,13 +38,23 @@ const UploadForm = () => {
     data.append("file", file);
     data.append("category", kat);
     data.append("name", name);
-    console.log(userInfo.token);
 
     axios
       .post("https://tiskara-humac.com/api/galerija/upload", data, {
         headers: {
           "content-type": "multipart/form-data",
           Authorization: `Bearer ${userInfo.token}`,
+        },
+        onUploadProgress: (progressEvent) => {
+          setUploadPercentage(
+            parseInt(
+              Math.round((progressEvent.loaded * 100) / progressEvent.total)
+            )
+          );
+          console.log(uploadPercentage);
+
+          // Clear percentage
+          setTimeout(() => setUploadPercentage(0), 10000);
         },
       })
       .then((res) => {
@@ -170,6 +182,7 @@ const UploadForm = () => {
           {error && <div className="error">{error}</div>}
           {file && <div>{file.name}</div>}
         </div>
+        <Progress percentage={uploadPercentage} />
         <button type="submit" className="btn btn-primary w-100">
           POTVRDI
         </button>
