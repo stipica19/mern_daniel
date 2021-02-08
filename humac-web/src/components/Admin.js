@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 import axios from "axios";
 import "../style.css";
@@ -6,58 +6,55 @@ import { useSelector } from "react-redux";
 import AddAPhotoIcon from "@material-ui/icons/AddAPhoto";
 import Header from "./Header";
 
-const UploadForm = () => {
-  const [file, setFile] = useState("");
-  const [error, setError] = useState(null);
-  const [kat, setKat] = useState("");
-  const [name, setName] = useState("");
+const Admin = () => {
+  const [images, setImages] = useState([]);
+  const [loading, setLoading] = useState(true);
   const userLogin = useSelector((state) => state.userLogin);
   const { userInfo } = userLogin;
 
-  const types = ["image/png", "image/jpeg"];
-
-  const handleChange = (e) => {
-    let selected = e.target.files[0];
-
-    if (selected && types.includes(selected.type)) {
-      setFile(selected);
-      console.log("fas" + selected);
-      setError("");
-    } else {
-      setFile(null);
-      setError("ODABERITE png ili jpg format slike");
-    }
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log("KATEGORIJA " + kat);
-    const data = new FormData();
-    data.append("file", file);
-    data.append("category", kat);
-    data.append("name", name);
-    console.log(userInfo.token);
-
+  useEffect(() => {
     axios
-      .post("https://tiskara-humac.com/api/galerija/upload", data, {
-        headers: {
-          "content-type": "multipart/form-data",
-          Authorization: `Bearer ${userInfo.token}`,
-        },
-      })
+      .get("https://tiskara-humac.com/api/galerija")
       .then((res) => {
         console.log(res.data);
+        setImages([...images, ...res.data]);
+        setTimeout(() => setLoading(!loading), 2000);
       })
       .catch((err) => {
         console.log(err);
       });
+  }, []);
+
+  const removeImage = (id) => {
+    axios.delete(`https://tiskara-humac.com/api/galerija/${id}`).then((res) => {
+      const del = images.filter((employee) => id !== employee.id);
+      setImages(del);
+      console.log("res", res);
+    });
   };
 
   return (
     <div>
       <Header />
+      <div className="admin-div">
+        {!loading
+          ? images.map((image) => (
+              <ul className="admin-ul">
+                <li className="admin-li">
+                  <img
+                    className="admin-img"
+                    src={`https://tiskara-humac.com/api/${image.images}`}
+                  />
+                  <h3>{image.category}</h3>
+
+                  <button onClick={() => removeImage(image._id)}>DELETE</button>
+                </li>
+              </ul>
+            ))
+          : "LOADING..."}
+      </div>
     </div>
   );
 };
 
-export default UploadForm;
+export default Admin;

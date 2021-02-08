@@ -20,7 +20,6 @@ const storage = multer.diskStorage({
 var upload = multer({ storage: storage }).single("file");
 
 router.get("/", (req, res) => {
-  console.log("USLI SMO U GET OD GALERIJE");
   Post.find()
     .then((slika) => {
       res.json(slika);
@@ -50,6 +49,12 @@ router.get("/:cat", async (req, res) => {
   } catch (error) {
     res.status(500).send();
   }
+});
+
+//Brisanje slike iz baze
+router.delete("/:id", (req, res) => {
+  console.log(req.params.id);
+  Post.findByIdAndDelete(req.params.id);
 });
 
 router.post("/upload", protect, admin, (req, res) => {

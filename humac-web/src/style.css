@@ -2058,3 +2058,34 @@ body {
 .uploadFile {
   padding-top: 100px;
 }
+/*=================ADMIN===================*/
+.admin-div {
+  padding-top: 200px;
+  margin: 50px;
+}
+
+.admin-ul {
+  list-style-type: none;
+  width: 500px;
+}
+
+.admin-img {
+  float: left;
+  width: 200px;
+  object-fit: contain;
+  margin: 0 15px 0 0;
+}
+
+.admin-li p {
+  font: 200 12px/1.5 Georgia, Times New Roman, serif;
+}
+
+.admin-li {
+  padding: 10px;
+  overflow: auto;
+}
+
+.admin-li:hover {
+  background: #eee;
+  cursor: pointer;
+}
