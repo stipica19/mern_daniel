@@ -155,7 +155,9 @@ function Contact() {
               </div>
               <div className="row">
                 <div className="button text-right">
-                  <button type="submit">POŠALJI</button>
+                  <button type="submit" className="button">
+                    POŠALJI
+                  </button>
                 </div>
               </div>
             </form>

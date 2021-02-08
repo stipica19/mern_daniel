@@ -3,7 +3,8 @@ import bodyParser from "body-parser";
 import nodemailer from "nodemailer";
 import mg from "nodemailer-mailgun-transport";
 import mailgun from "mailgun-js";
-
+import dotenv from "dotenv";
+dotenv.config();
 const router = express.Router();
 const app = express();
 import {
@@ -26,6 +27,9 @@ router.get("/", async (req, res) => {
   return res.send(pod);
 });
 
+const apiKey = process.env.API_KEY;
+const domain = process.env.DOMAIN;
+
 // email, subject, text
 router.post("/email", (req, res) => {
   const { name, email, message } = req.body;
@@ -41,8 +45,8 @@ router.post("/email", (req, res) => {
 
 const auth = {
   auth: {
-    apiKey: "ff2584e226772552f8e8421d84c86167-cb3791c4-f12b8dd7",
-    domain: "sandboxd3bbbb402ba54931808601b675ea12d1.mailgun.org",
+    apiKey: apiKey,
+    domain: domain,
   },
 };
 
