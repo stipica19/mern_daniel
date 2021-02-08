@@ -52,9 +52,17 @@ router.get("/:cat", async (req, res) => {
 });
 
 //Brisanje slike iz baze
-router.delete("/:id", (req, res) => {
-  console.log(req.params.id);
-  Post.findByIdAndDelete(req.params.id);
+router.delete("/:id", async (req, res) => {
+  const postremove = Post.findById(req.params.id);
+
+  if (postremove) {
+    console.log("brisanje");
+    await postremove.remove();
+    res.json({ message: "Slika izbrisana" });
+  } else {
+    res.status(404);
+    throw new Error("Slika nije izbrisana");
+  }
 });
 
 router.post("/upload", protect, admin, (req, res) => {

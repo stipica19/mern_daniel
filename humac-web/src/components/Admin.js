@@ -26,6 +26,7 @@ const Admin = () => {
   }, []);
 
   const removeImage = (id) => {
+    console.log("remove");
     axios.delete(`https://tiskara-humac.com/api/galerija/${id}`).then((res) => {
       const del = images.filter((employee) => id !== employee.id);
       setImages(del);
