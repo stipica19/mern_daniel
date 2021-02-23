@@ -16,12 +16,12 @@ const UploadForm = () => {
   const userLogin = useSelector((state) => state.userLogin);
   const { userInfo } = userLogin;
 
-  const types = ["image/png", "image/jpeg"];
+  const types = ["image/png", "image/jpeg", "image/webp"];
 
   const handleChange = (e) => {
     let selected = e.target.files[0];
 
-    if (selected && types.includes(selected.type)) {
+    if (selected) {
       setFile(selected);
       console.log("fas" + selected);
       setError("");
@@ -51,7 +51,6 @@ const UploadForm = () => {
               Math.round((progressEvent.loaded * 100) / progressEvent.total)
             )
           );
-          console.log(uploadPercentage);
 
           // Clear percentage
           setTimeout(() => setUploadPercentage(0), 10000);
