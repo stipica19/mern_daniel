@@ -4,6 +4,7 @@ const postSchema = mongoose.Schema({
   images: String,
   category: String,
   name: String,
+  opis: String,
   datum: { type: Date, default: Date.now },
 });
 
