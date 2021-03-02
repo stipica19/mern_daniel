@@ -78,13 +78,13 @@ const Slider = ({ slides }) => {
                   key={index}
                 >
                   {index === current && (
-                    <h4
+                    <h6
                       data-aos="fade-in"
                       data-aos-duration="800"
                       data-aos-delay="300"
                     >
                       {slide?.opis}
-                    </h4>
+                    </h6>
                   )}
                 </div>
               );
