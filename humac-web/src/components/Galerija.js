@@ -52,19 +52,19 @@ function Galerija() {
             </p>
           </div>
         </div>
-        <div className="row">
-          <div className="galerija-content">
+
+        <div className="ga">
+          <div className="grid-container">
             {images
               .reverse()
-              .slice(0, 6)
-              .map((image) => (
-                <div className="g-box" key={image.images}>
-                  <div className="img">
-                    <img
-                      src={`https://tiskara-humac.com/api/${image.images}`}
-                      alt="blog"
-                    />
-                  </div>
+              .slice(0, 10)
+              .map((image, index) => (
+                <div>
+                  <img
+                    className={`grid-item grid-item-${index + 1}`}
+                    src={`https://tiskara-humac.com/api/${image.images}`}
+                    alt="blog"
+                  />
                 </div>
               ))}
           </div>
