@@ -1214,7 +1214,7 @@ html {
 }
 .slider .slider--content h4 {
   font-family: "MyWebFont", "sans-serif";
-  color: red;
+  color: white;
   font-size: 600;
   font-size: 42px;
 }
@@ -1931,7 +1931,7 @@ body {
 
   .slider .slider--content h4 {
     font-family: "MyWebFont", "sans-serif";
-    color: red;
+    color: white;
     font-size: 24px;
   }
   .block {

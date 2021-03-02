@@ -11,7 +11,7 @@ const Slider = ({ slides }) => {
 
   const goToNext = () => {
     nextSlide();
-    setTimeout(nextSlide, 3000);
+    setTimeout(nextSlide, 5000);
     return () => goToNext();
   };
 
@@ -24,7 +24,7 @@ const Slider = ({ slides }) => {
 
     const timeout = setTimeout(() => {
       nextSlide();
-    }, 3000);
+    }, 5000);
 
     return () => clearTimeout(timeout);
   });
@@ -73,13 +73,20 @@ const Slider = ({ slides }) => {
           {isLoading &&
             slides.map((slide, index) => {
               return (
-                <h4
-                  data-aos="fade-in"
-                  data-aos-duration="800"
-                  data-aos-delay="300"
+                <div
+                  className={index === current ? "slide active" : "slide"}
+                  key={index}
                 >
-                  {slide?.opis}
-                </h4>
+                  {index === current && (
+                    <h4
+                      data-aos="fade-in"
+                      data-aos-duration="800"
+                      data-aos-delay="300"
+                    >
+                      {slide?.opis}
+                    </h4>
+                  )}
+                </div>
               );
             })}
         </div>
