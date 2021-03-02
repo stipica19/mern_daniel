@@ -57,6 +57,8 @@ const Slider = ({ slides }) => {
           <h6 data-aos="fade-in" data-aos-duration="800" data-aos-delay="300">
             TISKARA HUMAC
           </h6>
+          {isLoading && <h5>{slides[0]?.name}</h5>}
+
           <div
             className="cv-btn"
             data-aos="fade-in"
