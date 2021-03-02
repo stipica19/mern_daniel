@@ -57,7 +57,6 @@ const Slider = ({ slides }) => {
           <h6 data-aos="fade-in" data-aos-duration="800" data-aos-delay="300">
             TISKARA HUMAC
           </h6>
-          {isLoading && <h5>{slides[0]?.name}</h5>}
 
           <div
             className="cv-btn"
@@ -70,6 +69,14 @@ const Slider = ({ slides }) => {
             </HashLink>
           </div>
         </div>
+        <div className="block1">
+          {isLoading && (
+            <h4 data-aos="fade-in" data-aos-duration="800" data-aos-delay="300">
+              {slides[0]?.name} GRAVIRANJE na metalu
+            </h4>
+          )}
+        </div>
+
         <ChevronLeftRoundedIcon className="left-arrow" onClick={prevSlide} />
         <ChevronRightIcon className="right-arrow" onClick={nextSlide} />
 

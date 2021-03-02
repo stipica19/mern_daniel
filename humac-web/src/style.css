@@ -459,7 +459,7 @@ html {
   color: rgb(217, 31, 42);
 }
 
-@media (max-width: 500px) {
+@media (max-width: 535px) {
   .box:last-child .icon > .MuiSvgIcon-root {
     color: white;
   }
@@ -469,6 +469,20 @@ html {
     font-size: 18px;
     font-weight: 600;
     animation: galleryText 0.8s ease;
+  }
+  .block h1 {
+    color: white;
+    font-size: 34px;
+
+    margin-left: 10px;
+    margin-bottom: 10px;
+  }
+  .block h6 {
+    color: white;
+    font-size: 18px;
+    margin-left: 10px;
+    margin-bottom: 0px;
+    padding: 0;
   }
 }
 .services .service-content .box h5 {
@@ -1198,6 +1212,21 @@ html {
   font-family: "MyWebFont", "sans-serif";
   color: red;
 }
+.slider .slider--content h4 {
+  font-family: "MyWebFont", "sans-serif";
+  color: red;
+  font-size: 600;
+  font-size: 42px;
+}
+.block1 {
+  position: absolute;
+  z-index: 10;
+  flex: 0 0 35%;
+  max-width: 25%;
+  padding-right: 55px;
+  margin-bottom: 5vh;
+  margin-left: 65%;
+}
 
 .feature--title {
   font-size: 2.5rem;
@@ -1857,47 +1886,40 @@ body {
   margin-bottom: 25px;
 }
 
-/*@media only screen and (max-width: 767px) {
-  .home .slider .slider--content {
-    height: 50vh;
-  }
-  .notfound .notfound-404 {
-    height: 200px;
-  }
-  .notfound .notfound-404 h1 {
-    font-size: 200px;
-  }
-}*/
-
 @media only screen and (max-width: 480px) {
   .home {
-    height: 40vh;
+    width: 100%;
+    height: auto;
   }
   .home .slider {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 40vh;
     width: 100%;
+    height: auto;
   }
   .home .slider .slider--content {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 40vh;
+    width: 100%;
+    height: auto;
   }
   .home .slider .slider--content .slide {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 40vh;
+    /* height: 40vh; */
+
+    height: auto;
   }
   .home .slider .slider--content .slide.slide.active .imagee {
-    height: 40vh;
     width: 100%;
+    height: auto;
   }
   .home .slider .slider--content .slide.active {
-    height: 40vh;
+    width: 100%;
+    object-fit: contain;
   }
   .home .mouse_scroll {
     display: none;
@@ -1905,6 +1927,48 @@ body {
   .home .slider .slider--content .left-arrow,
   .home .slider .slider--content .right-arrow {
     display: none;
+  }
+
+  .slider .slider--content h4 {
+    font-family: "MyWebFont", "sans-serif";
+    color: red;
+    font-size: 24px;
+  }
+  .block {
+    position: absolute;
+    z-index: 10;
+    flex: 0 0 65%;
+    max-width: 75%;
+    padding-left: 25px;
+    margin-bottom: 5vh;
+    margin-left: 0vh;
+  }
+  .block h1 {
+    color: white;
+    font-size: 24px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+  }
+  .block h6 {
+    color: white;
+    font-size: 14px;
+    margin-left: 10px;
+    margin-bottom: 0px;
+    padding: 0;
+  }
+  .block1 {
+    z-index: 10;
+    flex: 0 0 35%;
+    max-width: 30%;
+
+    margin-bottom: 5vh;
+    margin-left: 55%;
+  }
+  .block1 h4 {
+    color: white;
+
+    font-size: 14px;
+    padding: 0;
   }
 
   .about-me {

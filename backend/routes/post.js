@@ -80,6 +80,7 @@ router.post("/upload", protect, admin, (req, res) => {
           images: req.file.filename,
           category: req.body.category,
           name: req.body.name,
+          opis: req.body.opis,
           datum: new Date(),
         });
 

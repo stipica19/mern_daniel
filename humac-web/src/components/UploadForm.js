@@ -12,6 +12,7 @@ const UploadForm = () => {
   const [error, setError] = useState(null);
   const [kat, setKat] = useState("");
   const [name, setName] = useState("");
+  const [opis, setOpis] = useState("");
   const [uploadPercentage, setUploadPercentage] = useState(0);
   const userLogin = useSelector((state) => state.userLogin);
   const { userInfo } = userLogin;
@@ -38,6 +39,7 @@ const UploadForm = () => {
     data.append("file", file);
     data.append("category", kat);
     data.append("name", name);
+    data.append("opis", opis);
 
     axios
       .post("https://tiskara-humac.com/api/galerija/upload", data, {
@@ -71,6 +73,12 @@ const UploadForm = () => {
         <div className="uploadFile">
           <input type="file" onChange={handleChange} />
         </div>
+
+        <input
+          type="text"
+          placeholder="Unesite za Cover opis"
+          onChange={(e) => setOpis(e.target.value)}
+        />
         <div className="flex-container">
           <div>
             <input
