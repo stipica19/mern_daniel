@@ -67,7 +67,7 @@ router.delete("/:id", async (req, res) => {
 
 router.post("/upload", protect, admin, (req, res) => {
   upload(req, res, (err) => {
-    console.log("KATEGORIJA ARTIKLA: " + req.body.name);
+    console.log("KATEGORIJA ARTIKLA: " + req.body.opis);
     if (err) {
       console.log("GREŠKA KOD FILE-a");
       console.log(err);

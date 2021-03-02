@@ -70,11 +70,18 @@ const Slider = ({ slides }) => {
           </div>
         </div>
         <div className="block1">
-          {isLoading && (
-            <h4 data-aos="fade-in" data-aos-duration="800" data-aos-delay="300">
-              {slides[0]?.name} GRAVIRANJE na metalu
-            </h4>
-          )}
+          {isLoading &&
+            slides.map((slide, index) => {
+              return (
+                <h4
+                  data-aos="fade-in"
+                  data-aos-duration="800"
+                  data-aos-delay="300"
+                >
+                  {slide?.opis}
+                </h4>
+              );
+            })}
         </div>
 
         <ChevronLeftRoundedIcon className="left-arrow" onClick={prevSlide} />
