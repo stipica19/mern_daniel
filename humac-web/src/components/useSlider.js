@@ -4,7 +4,7 @@ const useSlider = (slideImage, slideText, images) => {
   let slideCounter = 0;
   const id = useLocation();
   const [isLoading, setisLoading] = useState(false);
-
+  const slideText = "HELOO";
   useEffect(() => {
     if (images === undefined) {
       setisLoading(false);
@@ -27,7 +27,7 @@ const useSlider = (slideImage, slideText, images) => {
             rgba(34, 34, 34, 0.4),
             rgba(68, 68, 68, 0.4)
           ),   url(${require("../images/" + images[slide - 1]?.images)})`;
-    //slideText.current.innerHTML = images[slide - 1].text;
+    slideText.current.innerHTML = images[slide - 1]?.text;
     animateSlide(slideImage);
   };
 
