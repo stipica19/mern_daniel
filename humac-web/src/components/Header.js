@@ -34,7 +34,7 @@ function Header() {
 
   const headerScroll = () => {
     //console.log(window.scrollY);
-    if (window.scrollY >= 80) {
+    if (window.scrollY >= 500) {
       setNavbar(true);
     } else {
       setNavbar(false);

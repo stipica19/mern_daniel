@@ -32,10 +32,10 @@ function Usluge() {
                 </div>
                 <h5>GRAFIČKI DIZAJN</h5>
                 <p>
-                  Digitalna tehnologija sa sobom nosi ekološki prihvatljiv
-                  sistem, sa niskom upotrebom energije. Rezultati digitalne
-                  tehnologije su dosledni i automatski kontrolisani, a brzina
-                  usluge je dovedena do krajnjih granica.
+                  Grafički dizajn je dio naše djelatnosti koji obavljamo
+                  profesionalno za male tvrtke i za velike korporacije.
+                  Kvalitetno vizualno oblikovanje je osnova za dobar marketing
+                  tvrtke.
                 </p>
               </div>
 
@@ -51,10 +51,9 @@ function Usluge() {
                 </div>
                 <h5>TISAK I DORADA</h5>
                 <p>
-                  Digitalna tehnologija sa sobom nosi ekološki prihvatljiv
-                  sistem, sa niskom upotrebom energije. Rezultati digitalne
-                  tehnologije su dosledni i automatski kontrolisani, a brzina
-                  usluge je dovedena do krajnjih granica.
+                  Digitalni tisak je već neko vrijeme trend u tiskarskoj
+                  industriji. Svjesni smo tih prednosti te smo zato investirali
+                  u najmodernije digitalne tiskarske strojeve.
                 </p>
               </div>
               <div
@@ -69,10 +68,9 @@ function Usluge() {
                 </div>
                 <h5>KONTAKTIRAJTE NAS</h5>
                 <p>
-                  Digitalna tehnologija sa sobom nosi ekološki prihvatljiv
-                  sistem, sa niskom upotrebom energije. Rezultati digitalne
-                  tehnologije su dosledni i automatski kontrolisani, a brzina
-                  usluge je dovedena do krajnjih granica.
+                  POTREBNA VAM JE POMOĆ?
+                  <br /> IMATE PITANJE?
+                  <br /> Ovdje smo da vam pomognemo!
                 </p>
               </div>
             </div>

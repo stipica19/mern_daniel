@@ -34,27 +34,21 @@ function About() {
 
               <div className="text">
                 <h4>GRAFIČKI STUDIO HUMAC</h4>
-                <h6>
-                  predstavlja jednu od vodećih tvrtki u BiH u području
-                  digitalnog tiska velikih formata.
-                </h6>
+
                 <p>
-                  Kao jedinstvena firma na ovim prostorima. Okupljamo ljude koji
-                  zajedno imaju više od 30 godina iskustva na poslovima
-                  grafičkog dizajna i štampe
-                </p>
-                <p>
-                  Poduzeće je osnovano 1990. godine s ciljem da se bavi
-                  grafičkom djelatnošću. Permanentno ulaganje i praćenje
-                  tehnološkog razvoja, u području koje pokrivamo svojim
-                  proizvodima i uslugama, osigurali su nam velike proizvodne
-                  kapacitete, a dodatnom izobrazbom kadrova, i uz visoko
-                  obrazovane stručnjake, garantiramo vrhunsku kvalitetu
-                  proizvoda. Kvaliteta, profesionalnost i odgovornost prema
-                  potrošačima i suradnicima, vrijednosti su koje su oduvijek
-                  činile sastavni dio poslovne politike tvrtke i koje su
-                  stvorile povjerenje u proizvode i usluge. Želite li vrhunsku,
-                  kvalitetnu i brzu uslugu, obratite se nama!
+                  Naši počeci, datirajući iz davne 1999. godine, uglavnom su se
+                  odnosili na sitotisak i promotivni materijal. Koračamo prema
+                  trećem desetljeću rada i tijekom tog razdoblja dodali smo puno
+                  novih i različitih proizvoda i materijala u svoj asortiman.
+                  Svjesni smo da smo mi ljudi po svojoj prirodi vrlo različiti.
+                  Neki vole nešto što druge ne vole. Kako bismo udovoljili
+                  najširem mogućem rasponu potreba i želja, neprestano dodajemo
+                  nove proizvode, širimo asortiman raznih završnih materijala i,
+                  prije svega, puno vremena posvećujemo ponudi papira kao našem
+                  primarnom materijalu. Uvjereni smo da je pravi put samo put
+                  stalnog razvoja i traženja novih prilika. Svojim klijentima
+                  želimo ponuditi što više na jednom mjestu, jer to štedi
+                  vrijeme i, ne manje važno, novac.
                 </p>
 
                 <div className="social-links">
