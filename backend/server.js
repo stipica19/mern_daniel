@@ -45,10 +45,10 @@ app.use("/galerija", postSlike);
 app.use("/", pocetna);
 
 if (process.env.NODE_ENV === "production") {
-  app.use(express.static(path.join(__dirname, "../humac-web/build")));
+  app.use(express.static(path.join(__dirname, "humac-web/build")));
 
   app.get("*", (req, res) =>
-    res.sendFile(path.resolve(__dirname, "humac-web", "build", "index.html"))
+    res.sendFile(path.resolve(__dirname, "../humac-web", "build", "index.html"))
   );
 } else {
   app.get("/", (req, res) => {
