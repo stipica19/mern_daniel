@@ -19,7 +19,7 @@ const ImageGrid = ({ setSelectedImg }) => {
 
   const fetchTodos = (count = 10) => {
     axios
-      .get(`http://104.248.133.195:5000//galerija/${url.cat}?skip=${skip}`)
+      .get(`http://104.248.133.195:5000/galerija/${url.cat}?skip=${skip}`)
       .then((res) => {
         console.log(res.data);
         if (res.data.length === 0) {
@@ -66,12 +66,12 @@ const ImageGrid = ({ setSelectedImg }) => {
                     whileHover={{ opacity: 1 }}
                     onClick={() =>
                       setSelectedImg(
-                        `http://104.248.133.195:5000//${image.images}`
+                        `http://104.248.133.195:5000/${image.images}`
                       )
                     }
                   >
                     <motion.img
-                      src={`http://104.248.133.195:5000//${image.images}`}
+                      src={`http://104.248.133.195:5000/${image.images}`}
                       alt="uploaded pic"
                       initial={{ opacity: 0 }}
                       animate={{ opacity: 1 }}

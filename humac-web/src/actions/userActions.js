@@ -56,7 +56,7 @@ export const register = (name, email, password) => async (dispatch) => {
     };
 
     const { data } = await axios.post(
-      "http://104.248.133.195:5000//register",
+      "http://104.248.133.195:5000/register",
       { name, email, password },
       config
     );

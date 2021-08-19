@@ -20,7 +20,7 @@ function Galerija() {
 
   const fetchTodos = (count = 10) => {
     axios
-      .get(`http://104.248.133.195:5000//galerija`)
+      .get(`http://104.248.133.195:5000/galerija`)
       .then((res) => {
         console.log(res.data);
 
@@ -62,7 +62,7 @@ function Galerija() {
                 <div key={image.images}>
                   <img
                     className={`grid-item grid-item-${index + 1}`}
-                    src={`http://104.248.133.195:5000//${image.images}`}
+                    src={`http://104.248.133.195:5000/${image.images}`}
                     alt="radovi"
                   />
                 </div>
