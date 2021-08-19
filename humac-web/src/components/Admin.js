@@ -14,7 +14,7 @@ const Admin = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/galerija")
+      .get("https://tiskara-humac.com/api/galerija")
       .then((res) => {
         console.log(res.data);
         setImages([...images, ...res.data]);
@@ -27,7 +27,7 @@ const Admin = () => {
 
   const removeImage = (id) => {
     console.log("remove");
-    axios.delete(`http://localhost:5000/galerija/${id}`).then((res) => {
+    axios.delete(`https://tiskara-humac.com/api/galerija/${id}`).then((res) => {
       const del = images.filter((employee) => id !== employee._id);
       setImages(del);
       console.log("res", res);
@@ -44,7 +44,7 @@ const Admin = () => {
                 <li className="admin-li">
                   <img
                     className="admin-img"
-                    src={`http://localhost:5000/${image.images}`}
+                    src={`https://tiskara-humac.com/api/${image.images}`}
                   />
                   <h3>{image.category}</h3>
 
