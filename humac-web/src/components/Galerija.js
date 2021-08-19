@@ -20,7 +20,7 @@ function Galerija() {
 
   const fetchTodos = (count = 10) => {
     axios
-      .get(`https://tiskara-humac.com/api/galerija`)
+      .get(`http://localhost:5000/galerija`)
       .then((res) => {
         console.log(res.data);
 
@@ -59,11 +59,11 @@ function Galerija() {
               .reverse()
               .slice(0, 10)
               .map((image, index) => (
-                <div>
+                <div key={image.images}>
                   <img
                     className={`grid-item grid-item-${index + 1}`}
-                    src={`https://tiskara-humac.com/api/${image.images}`}
-                    alt="blog"
+                    src={`http://localhost:5000/${image.images}`}
+                    alt="radovi"
                   />
                 </div>
               ))}

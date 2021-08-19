@@ -23,7 +23,7 @@ import { protect, admin } from "../middleware/authMiddleware.js";
 router.get("/", async (req, res) => {
   console.log("Usli u index");
   const pod = await CoverPhoto.find({ category: "coverPhoto" });
-  console.log(pod);
+  console.log("haloooooooo" + pod);
   return res.send(pod);
 });
 
