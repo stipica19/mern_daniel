@@ -42,7 +42,7 @@ const UploadForm = () => {
     data.append("opis", opis);
 
     axios
-      .post("http://104.248.133.195:5000/galerija/upload", data, {
+      .post("https://tiskara-humac.com/api/galerija/upload", data, {
         headers: {
           "content-type": "multipart/form-data",
           Authorization: `Bearer ${userInfo.token}`,
