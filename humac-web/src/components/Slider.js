@@ -103,7 +103,7 @@ const Slider = ({ slides }) => {
               >
                 {index === current && (
                   <img
-                    src={`https://tiskara-humac.com/api/${slide?.images}`}
+                    src={`http://104.248.133.195:5000//${slide?.images}`}
                     alt="humac image"
                     className="imagee"
                   />

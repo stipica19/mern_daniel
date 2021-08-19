@@ -8,7 +8,7 @@ import { Loader } from "./Loader";
 function Home() {
   const [isLoading, setIsLoading] = useState(false);
   const [Error, setError] = useState(false);
-  const [url, setUrl] = useState("https://tiskara-humac.com/api");
+  const [url, setUrl] = useState("http://104.248.133.195:5000/");
   const [data, setData] = useState({});
 
   useEffect(() => {
